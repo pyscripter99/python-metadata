@@ -20,7 +20,18 @@ class MetaData:
         """Returns all of the dates from the metadata as a MetaTag with a type of 'date'
 
         Returns:
-            list: Contains MetaTag items with a type of date
+            list: Contains MetaTag items with a type of 'date'
+        """
+
+        tags = []
+
+        return tags
+
+    def get_files(self) -> list:
+        """Returns all of the file paths from the metadata as a MetaTag with a type of 'path'
+
+        Returns:
+            list: Contains MetaTag items with a type of 'path'
         """
 
         tags = []
