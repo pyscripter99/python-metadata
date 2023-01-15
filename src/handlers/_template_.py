@@ -23,7 +23,7 @@ class Handle:
         self.handles = [
             "image/png",
             "image/jpg",
-        ]  # can use mimetypes ( image/*, text/plain ) or file extensions ( png, jpg, txt )
+        ]  # can use mimetypes ( image/png, text/plain ) or file extensions ( png, jpg, txt )
 
     def read(self, file_path: str):
         """Loads the metadata from any given path
