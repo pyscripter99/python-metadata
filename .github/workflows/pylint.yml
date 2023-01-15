@@ -22,3 +22,7 @@ jobs:
     - name: Analysing the code with pylint
       run: |
         pylint $(git ls-files '*.py')
+    - name: Run python black code formatter
+      # You may pin to the exact commit or the version.
+      # uses: DataDog/action-py-black-formatter@4aedfc9477c7c02cc6154936d2df964bb014a226
+      uses: DataDog/action-py-black-formatter@v2.3
