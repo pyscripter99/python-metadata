@@ -1,5 +1,7 @@
 # python-MetaData
 
+> :warning: This project is incomplete and will not function.
+
 ## About
 
 This is a library that helps you to easily extract and edit metadata of files. The library is easy to use, and it can be used to extract metadata from any kind of file, such as photos, videos, documents, audio files, and more.
