@@ -1,4 +1,4 @@
-name: Pylint
+name: Python Validate
 
 on: [push]
 
@@ -28,4 +28,4 @@ jobs:
         pylint $(git ls-files '*.py')
     - name: Test with PyTest
       run: |
-        pytest
+        PYTHONPATH=src pytest
