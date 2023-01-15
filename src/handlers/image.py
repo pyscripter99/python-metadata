@@ -21,7 +21,12 @@ class Handle:
 
     def __init__(self) -> None:
         self.handles = [
-            "image/png"
+            "image/png",
+            "image/jpeg",
+            "application/x-ppm",
+            "image/gif",
+            "image/tiff",
+            "image/bmp",
         ]  # can use mimetypes ( image/*, text/plain ) or file extensions ( png, jpg, txt )
 
     def read(self, file_path: str):
