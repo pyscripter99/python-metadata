@@ -1,27 +1,40 @@
 """Template for metadata processor
 
-read file_path:
-    file_path -- The full path to the file to be processed
-    Return: A MetaData object
-    
-write file_path meta:
-    file_path -- The full path to the file to be processed
-    meta      -- the MetaData object containing the changes
-    Return: None
 """
+import os
+from internals.metadata import MetaData
 
 # name accordingly e.g. pngHandler.py
-from ..internals.metadata import MetaData
 
 
 class Handle:
+
+    """Provides functions for internal use
+    read file_path:
+        file_path -- The full path to the file to be processed
+        Return: A MetaData object
+    write file_path meta:
+        file_path -- The full path to the file to be processed
+        meta      -- the MetaData object containing the changes
+        Return: None
+    """
+
     def __init__(self) -> None:
         self.handles = [
             "image/png"
         ]  # can use mimetypes ( image/*, text/plain ) or file extensions ( png, jpg, txt )
 
     def read(self, file_path: str):
+        """Loads the metadata from any given path
+
+        Args:
+            file_path (str): The full path to the file
+
+        Returns:
+            MetaData: Contains all additional file information
+        """
         # do some metadata processing
+        os.path.getctime(file_path)
 
         mime = (
             {}
@@ -30,5 +43,9 @@ class Handle:
         return MetaData(mime)
 
     def write(self, file_path: str, meta: MetaData):
-        # write some metadata
-        pass
+        """Writes the metadata from MetaData object to the path
+
+        Args:
+            file_path (str): The full path to the file
+            meta (MetaData): The object containing the metadata
+        """
