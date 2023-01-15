@@ -21,6 +21,11 @@ jobs:
         python -m pip install --upgrade pip
         pip install pylint
         pip install -r requirements.txt
+        python -m pip install pytest
+        apt-get install libmagic-dev
     - name: Analysing the code with pylint
       run: |
         pylint $(git ls-files '*.py')
+    - name: Test with PyTest
+      run: |
+        pytest
