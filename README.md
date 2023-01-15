@@ -23,12 +23,11 @@ metadata = py_meta.read("path/to/file")
 # print
 print(metadata)
 
-# result:
-# Camera: Pixel 6 Pro
-# ...
-
 # edit
-metadata.camera = "Pixel 6" # <MetaData>.camera contains the camera feild with automatic formatting,  for manual editing, use metadata.raw["camera"] to manually edit. use metadata.json to export metadata to json (this creates a NEW object, changes will not apply)
+metadata.camera = "Pixel 6" 
+# <MetaData>.camera contains the camera field with automatic formatting.
+# For manual editing, use metadata.raw["camera"] to manually edit.
+# Use metadata.json to export metadata to json (this creates a NEW object, changes will not apply)
 
 # write
 py_meta.write("path/to/file", metadata)
