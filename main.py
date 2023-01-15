@@ -1,3 +1,7 @@
+"""Contains the fundamental code for editing metadata
+
+"""
+
 import os
 import inspect
 
